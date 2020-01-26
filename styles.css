@@ -25,7 +25,7 @@ body {
     background-color: rgba(228, 222, 215, 0.8);
     border: 3px solid  rgba(60, 63, 60, 1);
     border-radius: 5px;
-    padding: 5vh 1vh 1vh 1vh;
+    padding: 6vh 1vh 6vh 1vh;
     margin: auto;
     width: 60%;
 }
@@ -34,11 +34,10 @@ p {
     color: rgb(60, 63, 60);
     font-family: 'Bangers', cursive;
     font-size: calc(12px + 1.5vw);;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 0px
 }
 
 #timer {
     font-size: calc(12px + 3vw);;
-    
+    margin-bottom: 0px;
 }
