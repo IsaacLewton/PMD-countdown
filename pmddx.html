@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PMD DX</title>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+
+        <div class = "container">
+
+            <p>Time left until Pokemon Mystery Dungeon DX releases:</p>
+
+            <p id = "timer"></p>
+
+            <!-- Javascript for timer -->
+            <script type = "text/javascript">
+            
+                // PMDDX release date
+                var releaseDate = new Date("March 6, 2020 00:00:00");
+
+                var mainFunc = setInterval(function() {
+
+                    // Current time
+                    var now = new Date().getTime();
+
+                    // Time remaining
+                    var distance = releaseDate - now;
+
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Output
+                    document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+                        + minutes + "m " + seconds + "s ";
+
+                    // Message when game is out
+                    if (distance < 0)
+                    {
+                        clearInterval(mainFunc);
+                        document.getElementById("timer").innerHTML = "The game is out, enjoy it!";
+                    }
+                }, 1000);
+            
+            </script>
+
+        </div>
+
+    </body>
+</html>
